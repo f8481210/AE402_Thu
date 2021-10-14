@@ -12,7 +12,7 @@ pygame.init()
 #視窗設定
 size = (400, 400)
 screen = pygame.display.set_mode(size) #創建視窗
-pygame.display.set_caption("123456") #標題
+pygame.display.set_caption("標題") #標題
 
 #視窗關閉開關
 done = False #未完成
@@ -29,8 +29,7 @@ while not done: #無窮迴圈
     screen.fill(BLACK)
 
     #主要程式碼
-    pygame.draw.circle(screen,RED,(50,50),10,10)
-
+    
     
     pygame.display.flip() #更新畫面
 
