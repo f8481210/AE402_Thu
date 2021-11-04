@@ -3,38 +3,31 @@ import pygame
 #顏色設定區 tuple
 BLACK    = (   0,   0,   0)
 WHITE    = ( 255, 255, 255)
-GREEN    = (   0, 255,   0)
-RED      = ( 255,   0,   0)
-
-#遊戲初始化
-pygame.init()
 
 #視窗設定
+pygame.init()
 size = (400, 400)
-screen = pygame.display.set_mode(size) #創建視窗
-pygame.display.set_caption("標題") #標題
+screen = pygame.display.set_mode(size)
+pygame.display.set_caption("SHIP")
+done = False
+clock = pygame.time.Clock()
 
-#視窗關閉開關
-done = False #未完成
+# -------- 遊戲設定 -----------
 
-clock = pygame.time.Clock() #FPS禎數
-
-while not done: #無窮迴圈
-    #有沒有關掉視窗
+# -------- 主要的程式迴圈 -----------
+while not done: #遊戲執行中
+    # --- 事件迴圈 event loop
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             done = True
-
-    #背景顏色
-    screen.fill(BLACK)
-
+    
     #主要程式碼
     
+    #其他設定
+    pygame.display.flip()
+    clock.tick(5)
     
-    pygame.display.flip() #更新畫面
-
-    clock.tick(5) #每秒鐘執行幾次
-
+#遊戲結束
 pygame.quit()
 
 '''
