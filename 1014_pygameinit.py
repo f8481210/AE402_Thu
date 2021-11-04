@@ -8,7 +8,7 @@ WHITE    = ( 255, 255, 255)
 pygame.init()
 size = (400, 400)
 screen = pygame.display.set_mode(size)
-pygame.display.set_caption("SHIP")
+pygame.display.set_caption("遊戲標題")
 done = False
 clock = pygame.time.Clock()
 
