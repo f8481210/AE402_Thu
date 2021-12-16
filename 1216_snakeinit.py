@@ -35,8 +35,8 @@ class Segment(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
 
 
-        self.rect.x = x
-        self.rect.y = y
+        self.x = x
+        self.y = y
 # 初始化pygame
 pygame.init()
 # 視窗設定
